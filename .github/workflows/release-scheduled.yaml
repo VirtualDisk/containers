@@ -1,0 +1,93 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: Scheduled Release
+
+concurrency:
+  group: container-release
+  cancel-in-progress: false
+
+on:
+  workflow_dispatch:
+    secrets:
+      BOT_APP_ID:
+        description: The App ID of the GitHub App
+        required: true
+      BOT_APP_PRIVATE_KEY:
+        description: The private key of the GitHub App
+        required: true
+      REGISTRY_ZOE_USERNAME:
+        description: harbor username
+        required: true
+      REGISTRY_ZOE_PASSWORD:
+        description: harbor username
+        required: true
+    inputs:
+      appsToBuild:
+        description: App(s) to build
+        required: false
+        type: string
+        default: all
+      force:
+        description: Force rebuild
+        type: boolean
+        default: false
+        required: true
+      push-to-registry-zoe:
+        description: Push to registry.zoe
+        type: boolean
+        default: true
+        required: true
+      push-to-ghcr-io:
+        description: Push to ghcr.io
+        type: boolean
+        default: true
+        required: true
+  schedule:
+    - cron: "0 0 * * 0"
+
+jobs:
+  simple-checks:
+    name: Simple Checks
+    uses: VirtualDisk/containers/.github/workflows/simple-checks.yaml@main
+
+  build-images:
+    name: Build Images
+    needs: simple-checks
+    uses: VirtualDisk/containers/.github/workflows/build-images.yaml@main
+    if: inputs.push-to-registry-zoe == true
+    secrets:
+      BOT_APP_ID: ${{ secrets.BOT_APP_ID }}
+      BOT_APP_PRIVATE_KEY: ${{ secrets.BOT_APP_PRIVATE_KEY }}
+      REGISTRY_ZOE_USERNAME: ${{ secrets.REGISTRY_ZOE_USERNAME }}
+      REGISTRY_ZOE_PASSWORD: ${{ secrets.REGISTRY_ZOE_PASSWORD }}
+    permissions:
+      contents: read
+      packages: write
+    with:
+      appsToBuild: ${{ inputs.appsToBuild }}
+      force: ${{ inputs.force == true }}
+      pushImages: true
+      sendNotifications: true
+
+  build-images-ghcr:
+    name: Build Images GHCR
+    needs: ["simple-checks", "build-images"]
+    uses: VirtualDisk/containers/.github/workflows/build-images-ghcr.yaml@main
+    if: inputs.push-to-ghcr-io == true
+    secrets:
+      BOT_APP_ID: ${{ secrets.BOT_APP_ID }}
+      BOT_APP_PRIVATE_KEY: ${{ secrets.BOT_APP_PRIVATE_KEY }}
+    permissions:
+      contents: read
+      packages: write
+    with:
+      appsToBuild: ${{ inputs.appsToBuild }}
+      force: ${{ inputs.force == true }}
+      pushImages: true
+      sendNotifications: true
+
+  render-readme:
+    name: Render Readme
+    needs: build-images-ghcr
+    uses: ./.github/workflows/render-readme.yaml
+    secrets: inherit

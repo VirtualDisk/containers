@@ -1,0 +1,58 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: Release on Merge
+
+concurrency:
+  group: container-release
+  cancel-in-progress: false
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "apps/**"
+      - ".github/scripts/templates/**"
+      - "!apps/**/metadata.json"
+      - "!apps/**/metadata.yaml"
+      - "!apps/**/README.md"
+
+jobs:
+  simple-checks:
+    uses: VirtualDisk/containers/.github/workflows/simple-checks.yaml@main
+
+  get-changed-images:
+    needs: ["simple-checks"]
+    uses: VirtualDisk/containers/.github/workflows/get-changed-images.yaml@main
+
+  build-images:
+    needs: ["simple-checks", "get-changed-images"]
+    if: ${{ needs.get-changed-images.outputs.addedOrModified == 'true' }}
+    uses: VirtualDisk/containers/.github/workflows/build-images.yaml@main
+    permissions:
+      contents: read
+      packages: write
+    secrets: inherit
+    with:
+      appsToBuild: "${{ needs.get-changed-images.outputs.addedOrModifiedImages }}"
+      pushImages: true
+      sendNotifications: true
+
+  build-images-ghcr:
+    needs: ["simple-checks", "get-changed-images", "build-images"]
+    if: ${{ needs.get-changed-images.outputs.addedOrModified == 'true' }}
+    uses: VirtualDisk/containers/.github/workflows/build-images-ghcr.yaml@main
+    permissions:
+      contents: read
+      packages: write
+    secrets: inherit
+    with:
+      appsToBuild: "${{ needs.get-changed-images.outputs.addedOrModifiedImages }}"
+      pushImages: true
+      sendNotifications: true
+
+  render-readme:
+    name: Render Readme
+    needs: build-images-ghcr
+    if: ${{ always() && needs.build-images-ghcr.result != 'failure' }}
+    uses: ./.github/workflows/render-readme.yaml
+    secrets: inherit
