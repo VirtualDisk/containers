@@ -8,7 +8,7 @@ on:
 jobs:
   metadata-validation:
     name: Validate Image Metadata
-    runs-on: zc2-ubuntu
+    runs-on: gha-runner-scale-set-containers
     steps:
       - name: Checkout
         uses: actions/checkout@v4

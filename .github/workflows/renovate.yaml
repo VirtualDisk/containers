@@ -41,7 +41,7 @@ env:
 jobs:
   renovate:
     name: Renovate
-    runs-on: zc2-ubuntu
+    runs-on: gha-runner-scale-set-containers
     steps:
       - name: Generate Token
         uses: actions/create-github-app-token@v1
