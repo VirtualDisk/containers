@@ -8,7 +8,7 @@ on:
 jobs:
   metadata-validation:
     name: Validate Image Metadata
-    runs-on: gha-runner-scale-set-containers
+    runs-on: gha-runner-scale-set-containers-gren
     steps:
       - name: Checkout
         uses: actions/checkout@v4
