@@ -41,7 +41,7 @@ env:
 jobs:
   renovate:
     name: Renovate
-    runs-on: gha-runner-scale-set-containers-gren
+    runs-on: gha-runner-scale-set-containers-green
     steps:
       - name: Generate Token
         uses: actions/create-github-app-token@v1
