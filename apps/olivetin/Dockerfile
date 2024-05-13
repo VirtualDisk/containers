@@ -1,13 +1,15 @@
-ARG VERSION
-ARG TALOS_VERSION=v1.6.6
-ARG KUBERNETES_VERSION=v1.26.13
-FROM --platform=amd64 ghcr.io/actions/actions-runner:latest
+FROM docker.io/library/debian:latest AS builder
+RUN apt update && apt install -y curl
+ADD https://github.com/cloudnative-pg/cloudnative-pg/releases/download/v1.21.1/kubectl-cnpg_1.21.1_linux_x86_64.tar.gz /tmp
+RUN cd /tmp && tar xf /tmp/kubectl-cnpg_1.21.1_linux_x86_64.tar.gz && \
+    chmod +x  /tmp/kubectl-cnpg
 
-FROM docker.io/library/alpine:latest
-ADD "https://github.com/siderolabs/talos/releases/download/v1.6.6/talosctl-linux-amd64" "/bin/talosctl"
-ADD "https://dl.k8s.io/release/v1.26.14/bin/linux/amd64/kubectl" "/bin/kubectl"
-COPY ./entrypoint.sh /bin/entrypoint.sh
-RUN chmod +x /bin/talosctl && \
-    chmod +x /bin/kubectl && \
-    chmod +x /bin/entrypoint.sh
-CMD ["/bin/entrypoint.sh"]
+FROM docker.io/jamesread/olivetin:$VERSION
+COPY --from=builder /tmp/kubectl-cnpg /usr/bin/kubectl-cnpg
+ADD "https://dl.k8s.io/release/v1.27.2/bin/linux/amd64/kubectl" /usr/bin/kubectl
+ADD "https://github.com/sabhiram/go-wol/releases/download/v2.0.1/wol_linux_amd64" /usr/bin/wol
+USER root
+RUN chmod +x /usr/bin/kubectl
+RUN chmod +x /usr/bin/kubectl-cnpg
+RUN chmod +x /usr/bin/wol
+USER olivetin
