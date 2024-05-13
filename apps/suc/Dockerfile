@@ -6,7 +6,7 @@ FROM --platform=amd64 ghcr.io/actions/actions-runner:latest
 FROM docker.io/library/alpine:latest
 ADD "https://github.com/siderolabs/talos/releases/download/v1.6.6/talosctl-linux-amd64" "/bin/talosctl"
 ADD "https://dl.k8s.io/release/v1.26.14/bin/linux/amd64/kubectl" "/bin/kubectl"
-COPY ./entrypoint.sh /bin/entrypoint.sh
+COPY ./apps/suc/entrypoint.sh /bin/entrypoint.sh
 RUN chmod +x /bin/talosctl && \
     chmod +x /bin/kubectl && \
     chmod +x /bin/entrypoint.sh
