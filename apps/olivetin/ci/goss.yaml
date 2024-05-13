@@ -1,9 +1,9 @@
 ---
 # yaml-language-server: $schema=https://raw.githubusercontent.com/goss-org/goss/master/docs/schema.yaml
 file:
-  /bin/talosctl:
+  /usr/bin/kubectl:
     exists: true
-  /bin/kubectl:
+  /usr/bin/kubectl-cnpg:
     exists: true
-  /bin/entrypoint.sh:
+  /usr/bin/wol:
     exists: true
