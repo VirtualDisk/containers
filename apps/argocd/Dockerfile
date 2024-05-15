@@ -12,7 +12,7 @@ FROM docker.io/viaductoss/ksops:v4.3.1 as ksops-builder
 #--------Build Custom Argo Image-------------#
 #--------------------------------------------#
 
-FROM docker.io/argoproj/argocd:v2.6.7
+FROM docker.io/argoproj/argocd:v2.6.15
 
 # Switch to root for the ability to perform install
 USER root
