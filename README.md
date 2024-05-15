@@ -110,6 +110,7 @@ Container | Channel | Image
 --- | --- | ---
 [actions-runner](https://github.com/VirtualDisk/containers/pkgs/container/actions-runner) | stable | ghcr.io/VirtualDisk/actions-runner
 [argocd](https://github.com/VirtualDisk/containers/pkgs/container/argocd) | stable | ghcr.io/VirtualDisk/argocd
+[flatcar-kubevirt](https://github.com/VirtualDisk/containers/pkgs/container/flatcar-kubevirt) | stable | ghcr.io/VirtualDisk/flatcar-kubevirt
 [home-assistant](https://github.com/VirtualDisk/containers/pkgs/container/home-assistant) | stable | ghcr.io/VirtualDisk/home-assistant
 [olivetin](https://github.com/VirtualDisk/containers/pkgs/container/olivetin) | stable | ghcr.io/VirtualDisk/olivetin
 [par2cmdline-turbo](https://github.com/VirtualDisk/containers/pkgs/container/par2cmdline-turbo) | stable | ghcr.io/VirtualDisk/par2cmdline-turbo
