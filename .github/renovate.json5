@@ -27,8 +27,7 @@
         "app/{{parentDir}}"
       ],
       "matchDatasources": [
-        "docker",
-        "github-releases"
+        "docker"
       ],
       "matchFileNames": [
         "apps/**/Dockerfile"
@@ -49,8 +48,7 @@
         "app/{{parentDir}}"
       ],
       "matchDatasources": [
-        "docker",
-        "github-releases"
+        "docker"
       ],
       "matchFileNames": [
         "apps/**/Dockerfile"
@@ -73,8 +71,7 @@
         "app/{{parentDir}}"
       ],
       "matchDatasources": [
-        "docker",
-        "github-releases"
+        "docker"
       ],
       "matchFileNames": [
         "apps/**/Dockerfile"
