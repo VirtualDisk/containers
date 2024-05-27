@@ -1,8 +1,6 @@
 ARG VERSION
 ARG TALOS_VERSION=v1.6.6
 ARG KUBERNETES_VERSION=v1.26.13
-FROM --platform=amd64 ghcr.io/actions/actions-runner:latest
-
 FROM docker.io/library/alpine:latest
 ADD "https://github.com/siderolabs/talos/releases/download/v1.6.6/talosctl-linux-amd64" "/bin/talosctl"
 ADD "https://dl.k8s.io/release/v1.26.14/bin/linux/amd64/kubectl" "/bin/kubectl"
