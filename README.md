@@ -5,9 +5,9 @@ to edit this file, instead edit its template at: ./github/scripts/templates/READ
 <div align="center">
 
 
-## Containers
+## Containers de la Casa de Blanco
 
-_An opinionated collection of container images_
+_A collection of container images used in the infrastructure for Casa de Blanco.
 
 </div>
 
