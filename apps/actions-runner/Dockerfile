@@ -43,6 +43,11 @@ RUN \
     && \
     unzip /tmp/terraform.zip -d /usr/bin/
 
+RUN \
+    wget https://github.com/argoproj/argo-cd/releases/download/v2.11.2/argocd-linux-amd64 -O /usr/bin/argocd \
+    && \
+    chmod +x /usr/bin/argocd
+
 USER runner
 
 RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
