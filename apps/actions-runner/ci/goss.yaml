@@ -3,3 +3,11 @@
 file:
   /usr/bin/git:
     exists: true
+  /usr/bin/terraform:
+    exists: true
+  /usr/bin/yq:
+    exists: true
+  /usr/bin/jq:
+    exists: true
+  /usr/bin/argocd:
+    exists: true
