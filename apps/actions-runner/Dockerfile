@@ -29,19 +29,24 @@ RUN \
     rm -rf /var/lib/apt/lists/*
 
 RUN \
-    wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq \
+    wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -q -O /usr/bin/yq \
     && \
     chmod +x /usr/bin/yq
 
 RUN \
-    wget https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-linux-amd64 -O /usr/bin/jq \
+    wget https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-linux-amd64 -q -O /usr/bin/jq \
     && \
     chmod +x /usr/bin/jq
 
 RUN \
-    wget https://releases.hashicorp.com/terraform/1.7.5/terraform_1.7.5_linux_amd64.zip -O /tmp/terraform.zip \
+    wget https://releases.hashicorp.com/terraform/1.7.5/terraform_1.7.5_linux_amd64.zip -q -O /tmp/terraform.zip \
     && \
     unzip /tmp/terraform.zip -d /usr/bin/
+
+RUN \
+    wget https://github.com/argoproj/argo-cd/releases/download/v2.11.2/argocd-linux-amd64 -q -O /usr/bin/argocd \
+    && \
+    chmod +x /usr/bin/argocd
 
 USER runner
 
