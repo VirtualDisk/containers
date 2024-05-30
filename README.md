@@ -23,7 +23,7 @@ Welcome to my container images, if looking for a container start by [browsing th
 
 ## Purpose
 
-Sometimes an upstream container does not have certain configurations or binaries I need to use within my home infrastrucutre. This repository provides a way for me to automatically build and update my own containers based off of upstream images.
+Sometimes an upstream container does not have certain configurations or binaries I need to use within my home infrastructure. This repository provides a way for me to automatically build and update my own containers based off of upstream images.
 These containers are subject to change at any time, but you are free to use them.
 
 ## Available Images
