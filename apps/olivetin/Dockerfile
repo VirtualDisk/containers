@@ -4,7 +4,7 @@ ADD https://github.com/cloudnative-pg/cloudnative-pg/releases/download/v1.21.1/k
 RUN cd /tmp && tar xf /tmp/kubectl-cnpg_1.21.1_linux_x86_64.tar.gz && \
     chmod +x  /tmp/kubectl-cnpg
 
-FROM docker.io/jamesread/olivetin:2024.05.13
+FROM docker.io/jamesread/olivetin:2024.06.01
 COPY --from=builder /tmp/kubectl-cnpg /usr/bin/kubectl-cnpg
 ADD "https://dl.k8s.io/release/v1.27.2/bin/linux/amd64/kubectl" /usr/bin/kubectl
 ADD "https://github.com/sabhiram/go-wol/releases/download/v2.0.1/wol_linux_amd64" /usr/bin/wol
