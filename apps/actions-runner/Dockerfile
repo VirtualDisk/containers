@@ -29,6 +29,11 @@ RUN \
     rm -rf /var/lib/apt/lists/*
 
 RUN \
+    wget https://github.com/michaelsauter/crane/releases/download/v3.6.1/crane_linux_amd64 -q -O /usr/bin/crane \
+    && \
+    chmod +x /usr/bin/crane
+
+RUN \
     wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -q -O /usr/bin/yq \
     && \
     chmod +x /usr/bin/yq
