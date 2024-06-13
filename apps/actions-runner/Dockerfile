@@ -29,7 +29,7 @@ RUN \
     rm -rf /var/lib/apt/lists/*
 
 RUN \
-    wget https://github.com/michaelsauter/crane/releases/download/v3.6.1/crane_linux_amd64 -q -O /usr/bin/crane \
+    wget https://github.com/google/go-containerregistry/releases/download/v0.19.1/go-containerregistry_Linux_x86_64.tar.gz -q -O /usr/bin/crane \
     && \
     chmod +x /usr/bin/crane
 
