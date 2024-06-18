@@ -32,7 +32,7 @@ jobs:
       sendNotifications: false
 
   build-images-ghcr:
-    needs: ["simple-checks", "get-changed-images", "build-images"]
+    needs: ["simple-checks", "get-changed-images"]
     if: ${{ needs.get-changed-images.outputs.addedOrModified == 'true' }}
     uses: VirtualDisk/containers/.github/workflows/build-images-ghcr.yaml@main
     secrets: inherit

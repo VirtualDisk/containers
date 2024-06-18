@@ -71,7 +71,7 @@ jobs:
 
   build-images-ghcr:
     name: Build Images GHCR
-    needs: ["simple-checks", "build-images"]
+    needs: ["simple-checks"]
     uses: VirtualDisk/containers/.github/workflows/build-images-ghcr.yaml@main
     if: inputs.push-to-ghcr-io == true
     secrets:
