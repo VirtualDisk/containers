@@ -1,5 +1,5 @@
 ---
-app: system-upgrade-controller
+app: talos-node-mgmt
 semver: true
 channels:
   - name: stable
