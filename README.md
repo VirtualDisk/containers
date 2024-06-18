@@ -37,7 +37,7 @@ Container | Channel | Image
 [flatcar-kubevirt](https://github.com/VirtualDisk/containers/pkgs/container/flatcar-kubevirt) | stable | ghcr.io/VirtualDisk/flatcar-kubevirt
 [home-assistant](https://github.com/VirtualDisk/containers/pkgs/container/home-assistant) | stable | ghcr.io/VirtualDisk/home-assistant
 [olivetin](https://github.com/VirtualDisk/containers/pkgs/container/olivetin) | stable | ghcr.io/VirtualDisk/olivetin
-[system-upgrade-controller](https://github.com/VirtualDisk/containers/pkgs/container/system-upgrade-controller) | stable | ghcr.io/VirtualDisk/system-upgrade-controller
+[talos-node-mgmt](https://github.com/VirtualDisk/containers/pkgs/container/talos-node-mgmt) | stable | ghcr.io/VirtualDisk/talos-node-mgmt
 
 
 ## Deprecations
