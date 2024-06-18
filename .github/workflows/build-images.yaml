@@ -47,7 +47,7 @@ on:
 jobs:
   prepare:
     name: Prepare to Build
-    runs-on: gha-runner-scale-set-containers-green
+    runs-on: gha-runner-scale-set-containers-verde
     outputs:
       matrices: ${{ steps.prepare-matrices.outputs.matrices }}
     steps:
@@ -98,7 +98,7 @@ jobs:
   build-platform-images:
     name: Build/Test ${{ matrix.image.name }} (${{ matrix.image.platform }})
     needs: prepare
-    runs-on: gha-runner-scale-set-containers-green
+    runs-on: gha-runner-scale-set-containers-verde
     if: ${{ toJSON(fromJSON(needs.prepare.outputs.matrices).imagePlatforms) != '[]' && toJSON(fromJSON(needs.prepare.outputs.matrices).imagePlatforms) != '' }}
     strategy:
       fail-fast: false
