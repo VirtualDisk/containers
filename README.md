@@ -32,6 +32,7 @@ Each Image will be built with a `rolling` tag, along with tags specific to it's 
 
 Container | Channel | Image
 --- | --- | ---
+[act-runner](https://github.com/VirtualDisk/containers/pkgs/container/act-runner) | stable | ghcr.io/VirtualDisk/act-runner
 [actions-runner](https://github.com/VirtualDisk/containers/pkgs/container/actions-runner) | stable | ghcr.io/VirtualDisk/actions-runner
 [argocd](https://github.com/VirtualDisk/containers/pkgs/container/argocd) | stable | ghcr.io/VirtualDisk/argocd
 [flatcar-kubevirt](https://github.com/VirtualDisk/containers/pkgs/container/flatcar-kubevirt) | stable | ghcr.io/VirtualDisk/flatcar-kubevirt
