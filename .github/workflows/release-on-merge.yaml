@@ -24,18 +24,18 @@ jobs:
     needs: ["simple-checks"]
     uses: VirtualDisk/containers/.github/workflows/get-changed-images.yaml@main
 
-  build-images:
-    needs: ["simple-checks", "get-changed-images"]
-    if: ${{ needs.get-changed-images.outputs.addedOrModified == 'true' }}
-    uses: VirtualDisk/containers/.github/workflows/build-images.yaml@main
-    permissions:
-      contents: read
-      packages: write
-    secrets: inherit
-    with:
-      appsToBuild: "${{ needs.get-changed-images.outputs.addedOrModifiedImages }}"
-      pushImages: true
-      sendNotifications: true
+  # build-images:
+  #   needs: ["simple-checks", "get-changed-images"]
+  #   if: ${{ needs.get-changed-images.outputs.addedOrModified == 'true' }}
+  #   uses: VirtualDisk/containers/.github/workflows/build-images.yaml@main
+  #   permissions:
+  #     contents: read
+  #     packages: write
+  #   secrets: inherit
+  #   with:
+  #     appsToBuild: "${{ needs.get-changed-images.outputs.addedOrModifiedImages }}"
+  #     pushImages: true
+  #     sendNotifications: true
 
   build-images-ghcr:
     needs: ["simple-checks", "get-changed-images"]
