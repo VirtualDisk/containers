@@ -23,6 +23,7 @@ RUN \
     moreutils \
     unrar \
     unzip \
+    wakeonlan \
     wget \
     zip \
     && \
