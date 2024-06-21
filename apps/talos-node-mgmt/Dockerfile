@@ -1,6 +1,6 @@
-ARG VERSION
 FROM docker.io/library/alpine:latest
-ENV TALOS_VERSION=v1.7.4
+ARG VERSION
+ENV TALOS_VERSION=v1.7.5
 ENV KUBERNETES_VERSION=v1.26.14
 ADD "https://github.com/siderolabs/talos/releases/download/${TALOS_VERSION}/talosctl-linux-amd64" "/bin/talosctl"
 ADD "https://dl.k8s.io/release/${KUBERNETES_VERSION}/bin/linux/amd64/kubectl" "/bin/kubectl"
