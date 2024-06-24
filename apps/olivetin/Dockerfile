@@ -5,11 +5,17 @@ RUN cd /tmp && tar xf /tmp/kubectl-cnpg_1.21.1_linux_x86_64.tar.gz && \
     chmod +x  /tmp/kubectl-cnpg
 
 FROM docker.io/jamesread/olivetin:2024.06.04
-COPY --from=builder /tmp/kubectl-cnpg /usr/bin/kubectl-cnpg
+
 ADD "https://dl.k8s.io/release/v1.27.2/bin/linux/amd64/kubectl" /usr/bin/kubectl
+COPY --from=builder /tmp/kubectl-cnpg /usr/bin/kubectl-cnpg
+ADD "https://github.com/siderolabs/talos/releases/download/v1.7.5/talosctl-linux-amd64" /usr/bin/talosctl
 ADD "https://github.com/sabhiram/go-wol/releases/download/v2.0.1/wol_linux_amd64" /usr/bin/wol
+
 USER root
+
 RUN chmod +x /usr/bin/kubectl
 RUN chmod +x /usr/bin/kubectl-cnpg
+RUN chmod +x /usr/bin/talosctl
 RUN chmod +x /usr/bin/wol
+
 USER olivetin
