@@ -5,5 +5,7 @@ file:
     exists: true
   /usr/bin/kubectl-cnpg:
     exists: true
+  /usr/bin/talosctl:
+    exists: true
   /usr/bin/wol:
     exists: true
