@@ -3,4 +3,4 @@ version=$(curl -sX GET "https://api.github.com/repos/argoproj/argo-cd/releases/l
 version="${version#*v}"
 version="${version#*release-}"
 # printf "%s" "${version}"
-printf "%s" "2.11.4"
+printf "%s" "2.11.5"
