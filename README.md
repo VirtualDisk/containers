@@ -35,10 +35,16 @@ Container | Channel | Image
 [act-runner](https://github.com/VirtualDisk/containers/pkgs/container/act-runner) | stable | ghcr.io/VirtualDisk/act-runner
 [actions-runner](https://github.com/VirtualDisk/containers/pkgs/container/actions-runner) | stable | ghcr.io/VirtualDisk/actions-runner
 [argocd](https://github.com/VirtualDisk/containers/pkgs/container/argocd) | stable | ghcr.io/VirtualDisk/argocd
+[docker](https://github.com/VirtualDisk/containers/pkgs/container/docker) | stable | ghcr.io/VirtualDisk/docker
 [flatcar-kubevirt](https://github.com/VirtualDisk/containers/pkgs/container/flatcar-kubevirt) | stable | ghcr.io/VirtualDisk/flatcar-kubevirt
 [home-assistant](https://github.com/VirtualDisk/containers/pkgs/container/home-assistant) | stable | ghcr.io/VirtualDisk/home-assistant
 [olivetin](https://github.com/VirtualDisk/containers/pkgs/container/olivetin) | stable | ghcr.io/VirtualDisk/olivetin
+[openwebrxplus](https://github.com/VirtualDisk/containers/pkgs/container/openwebrxplus) | stable | ghcr.io/VirtualDisk/openwebrxplus
+[owncast](https://github.com/VirtualDisk/containers/pkgs/container/owncast) | stable | ghcr.io/VirtualDisk/owncast
 [talos-node-mgmt](https://github.com/VirtualDisk/containers/pkgs/container/talos-node-mgmt) | stable | ghcr.io/VirtualDisk/talos-node-mgmt
+[wyoming-openwakeword](https://github.com/VirtualDisk/containers/pkgs/container/wyoming-openwakeword) | stable | ghcr.io/VirtualDisk/wyoming-openwakeword
+[wyoming-piper](https://github.com/VirtualDisk/containers/pkgs/container/wyoming-piper) | stable | ghcr.io/VirtualDisk/wyoming-piper
+[wyoming-whisper](https://github.com/VirtualDisk/containers/pkgs/container/wyoming-whisper) | stable | ghcr.io/VirtualDisk/wyoming-whisper
 
 
 ## Deprecations
