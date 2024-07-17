@@ -37,6 +37,7 @@ Container | Channel | Image
 [argocd](https://github.com/VirtualDisk/containers/pkgs/container/argocd) | stable | ghcr.io/VirtualDisk/argocd
 [docker](https://github.com/VirtualDisk/containers/pkgs/container/docker) | stable | ghcr.io/VirtualDisk/docker
 [flatcar-kubevirt](https://github.com/VirtualDisk/containers/pkgs/container/flatcar-kubevirt) | stable | ghcr.io/VirtualDisk/flatcar-kubevirt
+[git](https://github.com/VirtualDisk/containers/pkgs/container/git) | stable | ghcr.io/VirtualDisk/git
 [home-assistant](https://github.com/VirtualDisk/containers/pkgs/container/home-assistant) | stable | ghcr.io/VirtualDisk/home-assistant
 [olivetin](https://github.com/VirtualDisk/containers/pkgs/container/olivetin) | stable | ghcr.io/VirtualDisk/olivetin
 [openwebrxplus](https://github.com/VirtualDisk/containers/pkgs/container/openwebrxplus) | stable | ghcr.io/VirtualDisk/openwebrxplus
