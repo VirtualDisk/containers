@@ -44,6 +44,7 @@ RUN \
     nano \
     openssh-client \
     openssl \
+    opus \
     postgresql-libs \
     socat \
     tiff \
