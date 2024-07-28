@@ -1,7 +1,7 @@
-FROM ghcr.io/virtualdisk/git
+FROM ghcr.io/virtualdisk/git:v2.45.2
 RUN git clone git@github.com:arnonym/ha-plugins.git /git
 
-ARG BUILD_FROM
+ARG BUILD_FROM="homeassistant/amd64-base-python"
 FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
