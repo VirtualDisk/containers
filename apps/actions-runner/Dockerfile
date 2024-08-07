@@ -59,6 +59,11 @@ RUN \
     && \
     chmod +x /usr/bin/kubectl
 
+RUN \
+    wget https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv5.4.3/kustomize_v5.4.3_linux_amd64.tar.gz -q -O /tmp/kustomize.tar.gz \
+    && \
+    tar xf /tmp/kustomize.tar.gz --directory /usr/bin
+
 USER runner
 
 RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
