@@ -64,6 +64,11 @@ RUN \
     && \
     tar xf /tmp/kustomize.tar.gz --directory /usr/bin
 
+RUN \
+    wget https://github.com/viaduct-ai/kustomize-sops/releases/download/v4.3.2/ksops_4.3.2_Linux_x86_64.tar.gz -q -O /tmp/ksops.tar.gz \
+    && \
+    tar xf /tmp/ksops.tar.gz --directory /usr/bin
+
 USER runner
 
 RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
