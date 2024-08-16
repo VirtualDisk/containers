@@ -7,7 +7,7 @@ ARG KSOPS_VERSION="v4.3.1"
 #--------Build KSOPS and Kustomize-----------#
 #--------------------------------------------#
 
-FROM quay.io/viaductoss/ksops:v4.3.2 as ksops-builder
+FROM quay.io/viaductoss/ksops:v4.3.2 AS ksops-builder
 
 #--------------------------------------------#
 #--------Build Custom Argo Image-------------#
