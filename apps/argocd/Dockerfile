@@ -1,19 +1,12 @@
-ARG ARGO_CD_VERSION="v2.6.7"
 # https://github.com/argoproj/argo-cd/blob/master/Dockerfile
-ARG KSOPS_VERSION="v4.3.1"
 
+# Build KSOPS and Kustomize
 
-#--------------------------------------------#
-#--------Build KSOPS and Kustomize-----------#
-#--------------------------------------------#
+FROM quay.io/viaductoss/ksops:v4.3.2 AS ksops-builder
 
-FROM quay.io/viaductoss/ksops:v4.3.2 as ksops-builder
+# Build custom Argo image
 
-#--------------------------------------------#
-#--------Build Custom Argo Image-------------#
-#--------------------------------------------#
-
-FROM quay.io/argoproj/argocd:v2.12.0
+FROM quay.io/argoproj/argocd:v2.12.1
 
 ENV ARGOCD_USER_ID=999
 
