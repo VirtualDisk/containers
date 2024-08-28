@@ -1,1 +1,1 @@
-FROM docker.io/library/docker:27.1.2-dind
+FROM docker.io/library/docker:27.2.0-dind
