@@ -1,1 +1,1 @@
-FROM docker.io/slechev/openwebrxplus:1.2.70@sha256:1ad6e6db1cd3cc2b75d24455c95c99f2be89cf86662eaae4531b9e4d30f2bd07
+FROM docker.io/slechev/openwebrxplus:1.2.71@sha256:41fb61c329ad12c6e17fb773c3c2d384d62c092f6a862f279632e8900a31e7fa
