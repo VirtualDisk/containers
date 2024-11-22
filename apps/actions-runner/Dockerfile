@@ -15,6 +15,7 @@ RUN \
     && \
     apt-get install -y --no-install-recommends --no-install-suggests \
     ca-certificates \
+    buildah \
     curl \
     gcc \
     git \
