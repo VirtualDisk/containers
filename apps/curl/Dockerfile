@@ -1,4 +1,4 @@
-FROM docker.io/library/alpine:3.20.3
+FROM docker.io/library/alpine:3.21.0
 RUN apk add --no-cache \
     "curl=8.9.1-r1" \
     "jq=1.7.1-r0"
