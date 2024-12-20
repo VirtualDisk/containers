@@ -44,6 +44,7 @@ Container | Channel | Image
 [openwebrxplus](https://github.com/VirtualDisk/containers/pkgs/container/openwebrxplus) | stable | ghcr.io/VirtualDisk/openwebrxplus
 [owncast](https://github.com/VirtualDisk/containers/pkgs/container/owncast) | stable | ghcr.io/VirtualDisk/owncast
 [rsync](https://github.com/VirtualDisk/containers/pkgs/container/rsync) | stable | ghcr.io/VirtualDisk/rsync
+[talos-image-factory](https://github.com/VirtualDisk/containers/pkgs/container/talos-image-factory) | stable | ghcr.io/VirtualDisk/talos-image-factory
 [talos-node-mgmt](https://github.com/VirtualDisk/containers/pkgs/container/talos-node-mgmt) | stable | ghcr.io/VirtualDisk/talos-node-mgmt
 [wget](https://github.com/VirtualDisk/containers/pkgs/container/wget) | stable | ghcr.io/VirtualDisk/wget
 [wyoming-openwakeword](https://github.com/VirtualDisk/containers/pkgs/container/wyoming-openwakeword) | stable | ghcr.io/VirtualDisk/wyoming-openwakeword
