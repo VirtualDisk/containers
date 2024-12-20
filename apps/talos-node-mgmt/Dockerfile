@@ -8,4 +8,6 @@ COPY ./apps/talos-node-mgmt/entrypoint.sh /bin/entrypoint.sh
 RUN chmod +x /bin/talosctl && \
     chmod +x /bin/kubectl && \
     chmod +x /bin/entrypoint.sh
+RUN apk add --no-cache \
+    jq
 CMD ["/bin/entrypoint.sh"]
