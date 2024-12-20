@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-version=$(grep curl apps/curl/Dockerfile | head -n 1 | awk -F '=' '{print $2}' | awk -F '\"' '{print $1}')
+version=$(grep factory apps/curl/Dockerfile | head -n 1 | awk -F ':' '{print $2}' | cut -d '@' -f 1)
 printf "%s" "${version}"
