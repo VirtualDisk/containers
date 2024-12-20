@@ -13,6 +13,8 @@ RUN chmod +x /bin/talosctl && \
     chmod +x /bin/kubectl && \
     chmod +x /bin/entrypoint.sh
 RUN apk add --no-cache \
+    bash \
+    ca-certificates \
     jq
 RUN rm -rf /tmp/*
 CMD ["/bin/entrypoint.sh"]
