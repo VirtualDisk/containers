@@ -1,4 +1,4 @@
-FROM docker.io/library/alpine:3.21.0
+FROM docker.io/library/alpine:3.21.1
 RUN apk add --no-cache \
-    rsync=3.3.0-r0
+    rsync=3.3.0-r1
 ENTRYPOINT ["rsync"]
