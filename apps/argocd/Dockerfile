@@ -2,7 +2,7 @@
 
 # Build KSOPS and Kustomize
 
-FROM quay.io/viaductoss/ksops:v4.3.2 AS ksops-builder
+FROM quay.io/viaductoss/ksops:v4.3.3 AS ksops-builder
 
 # Build custom Argo image
 
