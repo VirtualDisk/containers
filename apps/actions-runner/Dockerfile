@@ -63,8 +63,8 @@ RUN \
     chmod +x /usr/bin/kubectl
 
 ADD "https://github.com/siderolabs/talos/releases/download/${TALOS_VERSION}/talosctl-linux-amd64" \
-    "/bin/talosctl"
-RUN chmod +x /bin/talosctl
+    "/usr/bin/talosctl"
+RUN chmod +x /usr/bin/talosctl
 
 RUN \
     wget https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv5.4.3/kustomize_v5.4.3_linux_amd64.tar.gz -q -O /tmp/kustomize.tar.gz \
