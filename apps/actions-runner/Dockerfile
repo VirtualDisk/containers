@@ -1,7 +1,7 @@
 ARG VERSION
 FROM --platform=amd64 ghcr.io/actions/actions-runner:latest
 
-ENV TALOS_VERSION=v1.9.3
+ENV TALOS_VERSION=v1.9.4
 
 ENV HOMEBREW_NO_ANALYTICS=1 \
     HOMEBREW_NO_ENV_HINTS=1 \
@@ -53,12 +53,12 @@ RUN \
     unzip /tmp/terraform.zip -d /usr/bin/
 
 RUN \
-    wget https://github.com/argoproj/argo-cd/releases/download/v2.11.2/argocd-linux-amd64 -q -O /usr/bin/argocd \
+    wget https://github.com/argoproj/argo-cd/releases/download/v2.14.2/argocd-linux-amd64 -q -O /usr/bin/argocd \
     && \
     chmod +x /usr/bin/argocd
 
 RUN \
-    wget https://dl.k8s.io/release/v1.26.14/bin/linux/amd64/kubectl -q -O /usr/bin/kubectl \
+    wget https://dl.k8s.io/release/v1.32.2/bin/linux/amd64/kubectl -q -O /usr/bin/kubectl \
     && \
     chmod +x /usr/bin/kubectl
 
