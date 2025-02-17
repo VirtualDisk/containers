@@ -1,8 +1,10 @@
 #!/usr/bin/env sh
+set -uo pipefail
 
 health() {
-    until kubectl get volumes.longhorn.io -A | grep "degraded" || true; do
+    until kubectl get volumes.longhorn.io -A | grep -m 1 "degraded"; do
         echo "Some Longhorn volumes are degraded. Trying again in ${RETRY_TIME:-5} seconds."
+        kubectl get volumes.longhorn.io -A | grep "degraded"
         sleep "${RETRY_TIME:-5}"
     done
 
