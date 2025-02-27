@@ -1,5 +1,5 @@
 ---
-app: olivetin
+app: home-assistant
 semver: true
 channels:
   - name: stable

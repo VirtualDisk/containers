@@ -1,17 +1,15 @@
 ---
 # yaml-language-server: $schema=https://raw.githubusercontent.com/goss-org/goss/master/docs/schema.yaml
 file:
-  /usr/bin/kubectl:
+  /extbin/kubectl:
     exists: true
-  /usr/bin/kubectl-cnpg:
+  /extbin/kubectl-cnpg:
     exists: true
-  /usr/bin/talosctl:
-    exists: true
-  /usr/bin/wol:
+  /extbin/talosctl:
     exists: true
 port:
-  tcp6:1337:
+  tcp6:8123:
     listening: true
 http:
-  http://localhost:1337:
+  http://localhost:8123:
     status: 200
