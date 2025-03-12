@@ -10,6 +10,6 @@ file:
 port:
   tcp6:8123:
     listening: true
-http:
-  http://localhost:8123:
-    status: 200
+#http:
+#  http://localhost:8123:
+#  status: 200
