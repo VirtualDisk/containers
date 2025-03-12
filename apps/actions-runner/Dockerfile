@@ -58,7 +58,7 @@ RUN \
     chmod +x /usr/bin/argocd
 
 RUN \
-    wget https://dl.k8s.io/release/v1.32.2/bin/linux/amd64/kubectl -q -O /usr/bin/kubectl \
+    wget https://dl.k8s.io/release/v1.32.3/bin/linux/amd64/kubectl -q -O /usr/bin/kubectl \
     && \
     chmod +x /usr/bin/kubectl
 
