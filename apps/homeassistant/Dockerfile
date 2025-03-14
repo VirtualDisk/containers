@@ -8,7 +8,7 @@ RUN cd /tmp && tar xf /tmp/kubectl-cnpg_1.21.1_linux_x86_64.tar.gz && \
     chmod +x  /tmp/kubectl && \
     chmod +x  /tmp/talosctl
 
-FROM lscr.io/linuxserver/homeassistant:2025.3.2@sha256:3d1adc545e738c5fd258bec4008ab4bfb14ed48ec7c1b440cc70de7b2726a0c2
+FROM lscr.io/linuxserver/homeassistant:2025.3.3@sha256:213dcb833c35546a9eb7f28dce1e9c340a98fce39fb32a865fca18144e91dd7a
 
 COPY --from=downloader /tmp/kubectl-cnpg /extbin/kubectl-cnpg
 COPY --from=downloader /tmp/kubectl /extbin/kubectl
