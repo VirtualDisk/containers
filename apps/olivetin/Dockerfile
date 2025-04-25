@@ -6,7 +6,7 @@ RUN cd /tmp && tar xf /tmp/kubectl-cnpg_1.21.1_linux_x86_64.tar.gz && \
 
 FROM docker.io/jamesread/olivetin:2025.4.22
 
-ADD "https://dl.k8s.io/release/v1.32.3/bin/linux/amd64/kubectl" /usr/bin/kubectl
+ADD "https://dl.k8s.io/release/v1.32.4/bin/linux/amd64/kubectl" /usr/bin/kubectl
 COPY --from=builder /tmp/kubectl-cnpg /usr/bin/kubectl-cnpg
 ADD "https://github.com/siderolabs/talos/releases/download/v1.9.5/talosctl-linux-amd64" /usr/bin/talosctl
 ADD "https://github.com/sabhiram/go-wol/releases/download/v2.0.1/wol_linux_amd64" /usr/bin/wol
