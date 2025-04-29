@@ -10,6 +10,7 @@ ADD "https://dl.k8s.io/release/v1.32.4/bin/linux/amd64/kubectl" /usr/bin/kubectl
 COPY --from=builder /tmp/kubectl-cnpg /usr/bin/kubectl-cnpg
 ADD "https://github.com/siderolabs/talos/releases/download/v1.9.5/talosctl-linux-amd64" /usr/bin/talosctl
 ADD "https://github.com/sabhiram/go-wol/releases/download/v2.0.1/wol_linux_amd64" /usr/bin/wol
+ADD https://github.com/argoproj/argo-cd/releases/download/v2.14.11/argocd-linux-amd64 /usr/bin/argo
 
 USER root
 
@@ -17,5 +18,6 @@ RUN chmod +x /usr/bin/kubectl
 RUN chmod +x /usr/bin/kubectl-cnpg
 RUN chmod +x /usr/bin/talosctl
 RUN chmod +x /usr/bin/wol
+RUN chmod +x /usr/bin/argo
 
 USER olivetin
