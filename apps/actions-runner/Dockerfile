@@ -1,7 +1,7 @@
 ARG VERSION
 FROM --platform=amd64 ghcr.io/actions/actions-runner:latest
 
-ENV TALOS_VERSION=v1.10.0-alpha.2
+ENV TALOS_VERSION=v1.10.0
 
 ENV HOMEBREW_NO_ANALYTICS=1 \
     HOMEBREW_NO_ENV_HINTS=1 \
