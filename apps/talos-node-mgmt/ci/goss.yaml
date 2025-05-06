@@ -5,5 +5,9 @@ file:
     exists: true
   /bin/kubectl:
     exists: true
+  /bin/kubectl-ai:
+    exists: true
+  /bin/crane:
+    exists: true
   /bin/entrypoint.sh:
     exists: true

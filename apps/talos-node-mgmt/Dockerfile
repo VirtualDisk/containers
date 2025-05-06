@@ -8,11 +8,11 @@ ADD "https://dl.k8s.io/release/${KUBERNETES_VERSION}/bin/linux/amd64/kubectl" "/
 RUN \
     wget https://github.com/GoogleCloudPlatform/kubectl-ai/releases/download/${KUBECTL_AI_VERSION}/kubectl-ai_Linux_x86_64.tar.gz -q -O /tmp/kubectl-ai.tar.gz \
     && \
-    tar xf /tmp/kubectl-ai.tar.gz --directory /usr/bin
+    tar xf /tmp/kubectl-ai.tar.gz --directory /bin
 RUN \
     wget https://github.com/google/go-containerregistry/releases/download/v0.19.1/go-containerregistry_Linux_x86_64.tar.gz -q -O /tmp/crane.tar.gz \
     && \
-    tar xf /tmp/crane.tar.gz --directory /usr/bin
+    tar xf /tmp/crane.tar.gz --directory /bin
 RUN apk add --no-cache \
     bash \
     ca-certificates \
@@ -21,6 +21,7 @@ RUN rm -rf /tmp/*
 COPY ./apps/talos-node-mgmt/entrypoint.sh /bin/entrypoint.sh
 RUN chmod +x /bin/talosctl && \
     chmod +x /bin/kubectl && \
+    chmod +x /bin/crane && \
     chmod +x /bin/kubectl-ai && \
     chmod +x /bin/entrypoint.sh
 CMD ["/bin/entrypoint.sh"]
