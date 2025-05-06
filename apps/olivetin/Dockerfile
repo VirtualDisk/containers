@@ -11,11 +11,13 @@ COPY --from=builder /tmp/kubectl-cnpg /usr/bin/kubectl-cnpg
 ADD "https://github.com/siderolabs/talos/releases/download/v1.10.0/talosctl-linux-amd64" /usr/bin/talosctl
 ADD "https://github.com/sabhiram/go-wol/releases/download/v2.0.1/wol_linux_amd64" /usr/bin/wol
 ADD https://github.com/argoproj/argo-cd/releases/download/v2.14.11/argocd-linux-amd64 /usr/bin/argo
+ADD https://github.com/GoogleCloudPlatform/kubectl-ai/releases/download/v0.0.7/kubectl-ai_Linux_x86_64.tar.gz /usr/bin/kubectl-ai
 
 USER root
 
 RUN chmod +x /usr/bin/kubectl
 RUN chmod +x /usr/bin/kubectl-cnpg
+RUN chmod +x /usr/bin/kubectl-ai
 RUN chmod +x /usr/bin/talosctl
 RUN chmod +x /usr/bin/wol
 RUN chmod +x /usr/bin/argo
