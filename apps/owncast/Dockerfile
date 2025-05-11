@@ -1,1 +1,1 @@
-FROM docker.io/gabekangas/owncast:0.2.2
+FROM docker.io/gabekangas/owncast:0.2.3
