@@ -1,15 +1,16 @@
 FROM docker.io/library/debian:latest AS builder
-ENV TALOS_VERSION=v1.10.2
-ENV ARGOCD_VERSION=v1.14.11
-ENV KUBECTL_AI_VERSION=v0.0.9
-ENV WOL_VERSION=v2.0.1
-ENV KUBERNETES_VERSION=v1.33.1
+ENV CNPG_VERSION=v1.21.1
 RUN apt update && apt install -y curl
-ADD https://github.com/cloudnative-pg/cloudnative-pg/releases/download/v1.21.1/kubectl-cnpg_1.21.1_linux_x86_64.tar.gz /tmp
-RUN cd /tmp && tar xf /tmp/kubectl-cnpg_1.21.1_linux_x86_64.tar.gz && \
+ADD https://github.com/cloudnative-pg/cloudnative-pg/releases/download/${CNPG_VERSION}/kubectl-cnpg_1.21.1_linux_x86_64.tar.gz /tmp
+RUN cd /tmp && tar xf /tmp/kubectl-cnpg_${CNPG_VERSION}_linux_x86_64.tar.gz && \
     chmod +x  /tmp/kubectl-cnpg
 
 FROM docker.io/jamesread/olivetin:2025.4.22
+ENV ARGOCD_VERSION=v2.14.11
+ENV KUBECTL_AI_VERSION=v0.0.9
+ENV KUBERNETES_VERSION=v1.33.1
+ENV TALOS_VERSION=v1.10.2
+ENV WOL_VERSION=v2.0.1
 
 ADD "https://dl.k8s.io/release/${KUBERNETES_VERSION}/bin/linux/amd64/kubectl" /usr/bin/kubectl
 COPY --from=builder /tmp/kubectl-cnpg /usr/bin/kubectl-cnpg
