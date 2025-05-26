@@ -5,9 +5,9 @@ ADD https://github.com/cloudnative-pg/cloudnative-pg/releases/download/v${CNPG_V
 RUN cd /tmp && tar xf /tmp/kubectl-cnpg_${CNPG_VERSION}_linux_x86_64.tar.gz && \
     chmod +x  /tmp/kubectl-cnpg
 
-FROM docker.io/jamesread/olivetin:2025.4.22
+FROM docker.io/jamesread/olivetin:2025.5.26
 ENV ARGOCD_VERSION=v2.14.11
-ENV KUBECTL_AI_VERSION=v0.0.9
+ENV KUBECTL_AI_VERSION=v0.0.10
 ENV KUBERNETES_VERSION=v1.33.1
 ENV TALOS_VERSION=v1.10.2
 ENV WOL_VERSION=v2.0.1
