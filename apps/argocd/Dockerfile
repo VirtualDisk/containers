@@ -6,7 +6,7 @@ FROM quay.io/viaductoss/ksops:v4.3.3 AS ksops-builder
 
 # Build custom Argo image
 
-FROM quay.io/argoproj/argocd:v3.0.3
+FROM quay.io/argoproj/argocd:v3.0.4
 
 ENV ARGOCD_USER_ID=999
 
