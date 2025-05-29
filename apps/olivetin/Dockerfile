@@ -9,7 +9,7 @@ FROM docker.io/jamesread/olivetin:2025.5.26
 ENV ARGOCD_VERSION=v2.14.11
 ENV KUBECTL_AI_VERSION=v0.0.10
 ENV KUBERNETES_VERSION=v1.33.1
-ENV TALOS_VERSION=v1.10.2
+ENV TALOS_VERSION=v1.10.3
 ENV WOL_VERSION=v2.0.1
 
 ADD "https://dl.k8s.io/release/${KUBERNETES_VERSION}/bin/linux/amd64/kubectl" /usr/bin/kubectl
