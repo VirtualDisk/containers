@@ -16,6 +16,10 @@ reset() {
         kubectl delete node $NODE --wait=false
 }
 
+reboot() {
+    talosctl --nodes=$NODE_IP reboot --wait=false
+}
+
 shutdown_all() {
     # echo kubectl annotate -n datastores clusters.postgresql.cnpg.io "${CNPG_CLUSTER:-postgresql-v27}" --overwrite cnpg.io/hibernation=on
     # until kubectl get pods -n datastores | grep -m 1 "${CNPG_CLUSTER:-postgresql-v27}"; do
