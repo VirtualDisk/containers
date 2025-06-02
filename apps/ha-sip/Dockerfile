@@ -1,4 +1,4 @@
-FROM ghcr.io/virtualdisk/git:v2.47.2 AS git
+FROM ghcr.io/virtualdisk/git:v2.49.0 AS git
 RUN git clone https://github.com/arnonym/ha-plugins.git /git
 
 FROM docker.io/homeassistant/amd64-base-python:3.11-alpine3.16@sha256:4b36bbf5d25863dda84eaebc24a2a4e811b33da0b0a9f4b5ecb362a69b3f20f7
