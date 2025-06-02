@@ -17,6 +17,7 @@ reset() {
 }
 
 reboot() {
+    kubectl label node $NODE suc.rancher.io/talos-reboot=false --overwrite=true
     talosctl --nodes=$NODE_IP reboot --wait=false
 }
 
