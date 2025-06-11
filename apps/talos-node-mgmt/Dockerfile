@@ -5,7 +5,7 @@ ENV TALOS_VERSION=v1.10.3
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
 ENV KUBERNETES_VERSION=v1.33.1
 # renovate: datasource=github-releases depName=GoogleCloudPlatform/kubectl-ai
-ENV KUBECTL_AI_VERSION=v0.0.7
+ENV KUBECTL_AI_VERSION=v0.0.12
 ADD "https://github.com/siderolabs/talos/releases/download/${TALOS_VERSION}/talosctl-linux-amd64" "/bin/talosctl"
 ADD "https://dl.k8s.io/release/${KUBERNETES_VERSION}/bin/linux/amd64/kubectl" "/bin/kubectl"
 RUN \
