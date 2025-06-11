@@ -12,7 +12,7 @@ ENV ARGOCD_VERSION=v2.14.11
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
 ENV KUBERNETES_VERSION=v1.33.1
 # renovate: datasource=github-releases depName=GoogleCloudPlatform/kubectl-ai
-ENV KUBECTL_AI_VERSION=v0.0.10
+ENV KUBECTL_AI_VERSION=v0.0.12
 # renovate: datasource=github-releases depName=siderolabs/talos
 ENV TALOS_VERSION=v1.10.3
 # renovate: datasource=github-releases depName=sabhiram/go-wol
