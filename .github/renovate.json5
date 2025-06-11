@@ -13,17 +13,6 @@
     "prEditedNotification",
     "prIgnoreNotification"
   ],
-  "regexManagers": [
-    {
-      "fileMatch": ["(^|/)/Dockerfile$"],
-      "matchStrings": [
-        "ARG\\s+(\\w+)_VERSION=(?<currentValue>.*?)\\n"
-      ],
-      "datasourceTemplate": "docker",
-      "depNameTemplate": "{{argName}}",
-      "versioningTemplate": "docker"
-    }
-  ],
   "packageRules": [
     {
       "addLabels": [
@@ -39,7 +28,8 @@
       ],
       "matchDatasources": [
         "docker",
-        "github-release-attachments"
+        "github-release-attachments",
+        "github-releases"
       ],
       "matchFileNames": [
         "apps/**/Dockerfile"
