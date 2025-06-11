@@ -12,5 +12,37 @@
   "suppressNotifications": [
     "prEditedNotification",
     "prIgnoreNotification"
+  ],
+  packageRules: [
+    {
+      description: ["Release Rules for Application Updates"],
+      addLabels: ["app/{{parentDir}}"],
+      additionalBranchPrefix: "{{parentDir}}-",
+      commitMessageExtra: "( {{currentVersion}} → {{newVersion}} )",
+      commitMessageTopic: "{{depName}}",
+      matchFileNames: ["**/Dockerfile"],
+      semanticCommitScope: "{{parentDir}}",
+      semanticCommitType: "release",
+    },
+    {
+      description: ["Allowed Ubuntu Version for Base Images"],
+      matchDatasources: ["docker"],
+      matchPackageNames: ["/ubuntu/"],
+      allowedVersions: "/24\\.04/",
+    },
+    {
+      description: ["Allowed Alpine Version for Base Images"],
+      matchDatasources: ["docker"],
+      matchFileNames: ["**/Dockerfile"],
+      matchPackageNames: ["/alpine/"],
+      allowedVersions: "/3\\.22/",
+    },
+    {
+      description: ["Allowed Python Version for Base Images"],
+      matchDatasources: ["docker"],
+      matchFileNames: ["**/Dockerfile"],
+      matchPackageNames: ["/python/"],
+      allowedVersions: "/3\\.13-alpine3\\.22/",
+    }
   ]
 }
