@@ -24,6 +24,7 @@
       matchFileNames: ["**/Dockerfile"],
       semanticCommitScope: "{{parentDir}}",
       semanticCommitType: "release",
+      groupName: "app deps"
     },
     {
       description: ["Allowed Ubuntu Version for Base Images"],
