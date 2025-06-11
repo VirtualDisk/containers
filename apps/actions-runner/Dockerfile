@@ -10,7 +10,7 @@ ENV ARGOCD_VERSION=v2.14.11
 # renovate: datasource=github-releases depName=google/go-containerregistry
 ENV CRANE_VERSION=v0.19.1
 # renovate: datasource=github-releases depName=mikefarah/yq
-ENV YQ_VERSION=v0.19.1
+ENV YQ_VERSION=v4.45.4
 # renovate: datasource=github-releases depName=jqlang/jq
 ENV JQ_VERSION=jq-1.7.1
 
