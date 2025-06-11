@@ -1,7 +1,7 @@
 FROM docker.io/library/alpine:latest
 ARG VERSION
 # renovate: datasource=github-releases depName=siderolabs/talos
-ENV TALOS_VERSION=v1.10.3
+ENV TALOS_VERSION=v1.10.4
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
 ENV KUBERNETES_VERSION=v1.33.1
 # renovate: datasource=github-releases depName=GoogleCloudPlatform/kubectl-ai
