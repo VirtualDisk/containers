@@ -6,7 +6,7 @@ ENV KUBERNETES_VERSION=v1.33.1
 # renovate: datasource=github-releases depName=siderolabs/talos
 ENV TALOS_VERSION=v1.10.3
 # renovate: datasource=github-releases depName=argoproj/argo-cd
-ENV ARGOCD_VERSION=v2.14.11
+ENV ARGOCD_VERSION=v2.14.14
 # renovate: datasource=github-releases depName=google/go-containerregistry
 ENV CRANE_VERSION=v0.19.1
 # renovate: datasource=github-releases depName=mikefarah/yq
