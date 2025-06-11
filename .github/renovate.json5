@@ -33,6 +33,12 @@
       allowedVersions: "/24\\.04/",
     },
     {
+      description: ["Allowed ArgoCD Version"],
+      matchDatasources: ["docker", "github-releases"],
+      matchPackageNames: ["/argocd/"],
+      allowedVersions: "/v2\\.14\\.17/",
+    },
+    {
       description: ["Allowed Alpine Version for Base Images"],
       matchDatasources: ["docker"],
       matchFileNames: ["**/Dockerfile"],
