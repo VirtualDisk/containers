@@ -1,7 +1,18 @@
 ARG VERSION
 FROM --platform=amd64 ghcr.io/actions/actions-runner:latest
 
+# renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
+ENV KUBERNETES_VERSION=v1.33.1
+# renovate: datasource=github-releases depName=siderolabs/talos
 ENV TALOS_VERSION=v1.10.3
+# renovate: datasource=github-releases depName=argoproj/argo-cd
+ENV ARGOCD_VERSION=v2.14.11
+# renovate: datasource=github-releases depName=google/go-containerregistry
+ENV CRANE_VERSION=v0.19.1
+# renovate: datasource=github-releases depName=mikefarah/yq
+ENV YQ_VERSION=v0.19.1
+# renovate: datasource=github-releases depName=jqlang/jq
+ENV JQ_VERSION=jq-1.7.1
 
 ENV HOMEBREW_NO_ANALYTICS=1 \
     HOMEBREW_NO_ENV_HINTS=1 \
@@ -33,7 +44,7 @@ RUN \
     rm -rf /var/lib/apt/lists/*
 
 RUN \
-    wget https://github.com/google/go-containerregistry/releases/download/v0.19.1/go-containerregistry_Linux_x86_64.tar.gz -q -O /tmp/crane.tar.gz \
+    wget https://github.com/google/go-containerregistry/releases/download/${CRANE_VERSION}/go-containerregistry_Linux_x86_64.tar.gz -q -O /tmp/crane.tar.gz \
     && \
     tar xf /tmp/crane.tar.gz --directory /usr/bin
 
@@ -43,7 +54,7 @@ RUN \
     chmod +x /usr/bin/yq
 
 RUN \
-    wget https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-linux-amd64 -q -O /usr/bin/jq \
+    wget https://github.com/jqlang/jq/releases/download/${JQ_VERSION}/jq-linux-amd64 -q -O /usr/bin/jq \
     && \
     chmod +x /usr/bin/jq
 
@@ -53,12 +64,12 @@ RUN \
     unzip /tmp/terraform.zip -d /usr/bin/
 
 RUN \
-    wget https://github.com/argoproj/argo-cd/releases/download/v2.14.2/argocd-linux-amd64 -q -O /usr/bin/argocd \
+    wget https://github.com/argoproj/argo-cd/releases/download/${ARGOCD_VERSION}/argocd-linux-amd64 -q -O /usr/bin/argocd \
     && \
     chmod +x /usr/bin/argocd
 
 RUN \
-    wget https://dl.k8s.io/release/v1.32.4/bin/linux/amd64/kubectl -q -O /usr/bin/kubectl \
+    wget https://dl.k8s.io/release/${KUBERNETES_VERSION}/bin/linux/amd64/kubectl -q -O /usr/bin/kubectl \
     && \
     chmod +x /usr/bin/kubectl
 
