@@ -2,10 +2,10 @@ FROM docker.io/library/debian:trixie-slim AS downloader
 RUN apt-get update && apt-get install -y curl
 
 # renovate: datasource=github-releases depName=cloudnative-pg/cloudnative-pg
-ENV CNPG_VERSION=1.25.1
+ENV CNPG_VERSION=1.26.0
 
 # renovate: datasource=github-releases depName=siderolabs/talos
-ENV TALOS_VERSION=v1.10.3
+ENV TALOS_VERSION=v1.10.4
 
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
 ENV KUBERNETES_VERSION=v1.33.1
@@ -18,7 +18,7 @@ RUN cd /tmp && tar xf "/tmp/kubectl-cnpg_${CNPG_VERSION}_linux_x86_64.tar.gz" &&
     chmod +x  /tmp/kubectl && \
     chmod +x  /tmp/talosctl
 
-FROM lscr.io/linuxserver/homeassistant:2025.5.3@sha256:ea0ad11a785863ef55a6b7fe2e2b02d4d85fe7fea2dfc19512c6626f109af6f3
+FROM lscr.io/linuxserver/homeassistant:2025.6.0@sha256:a813ff6edac58ff8ac884bdb85d28fdd64ea208ff42e9ea977731de44f327f6d
 
 COPY --from=downloader /tmp/kubectl-cnpg /extbin/kubectl-cnpg
 COPY --from=downloader /tmp/kubectl /extbin/kubectl
