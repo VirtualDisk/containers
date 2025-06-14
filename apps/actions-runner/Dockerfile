@@ -8,7 +8,7 @@ ENV TALOS_VERSION=v1.10.4
 # renovate: datasource=github-releases depName=argoproj/argo-cd
 ENV ARGOCD_VERSION=v2.14.14
 # renovate: datasource=github-releases depName=google/go-containerregistry
-ENV CRANE_VERSION=v0.20.5
+ENV CRANE_VERSION=v0.20.6
 # renovate: datasource=github-releases depName=mikefarah/yq
 ENV YQ_VERSION=v4.45.4
 # renovate: datasource=github-releases depName=jqlang/jq
