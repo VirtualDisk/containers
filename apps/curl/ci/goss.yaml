@@ -1,7 +1,0 @@
----
-# yaml-language-server: $schema=https://raw.githubusercontent.com/goss-org/goss/master/docs/schema.yaml
-file:
-  /usr/bin/curl:
-    exists: true
-  /usr/bin/jq:
-    exists: true
