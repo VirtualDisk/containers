@@ -35,7 +35,6 @@ Container | Channel | Image
 [act-runner](https://github.com/VirtualDisk/containers/pkgs/container/act-runner) | stable | ghcr.io/VirtualDisk/act-runner
 [actions-runner](https://github.com/VirtualDisk/containers/pkgs/container/actions-runner) | stable | ghcr.io/VirtualDisk/actions-runner
 [argocd](https://github.com/VirtualDisk/containers/pkgs/container/argocd) | stable | ghcr.io/VirtualDisk/argocd
-[curl](https://github.com/VirtualDisk/containers/pkgs/container/curl) | stable | ghcr.io/VirtualDisk/curl
 [docker](https://github.com/VirtualDisk/containers/pkgs/container/docker) | stable | ghcr.io/VirtualDisk/docker
 [git](https://github.com/VirtualDisk/containers/pkgs/container/git) | stable | ghcr.io/VirtualDisk/git
 [ha-sip](https://github.com/VirtualDisk/containers/pkgs/container/ha-sip) | stable | ghcr.io/VirtualDisk/ha-sip
