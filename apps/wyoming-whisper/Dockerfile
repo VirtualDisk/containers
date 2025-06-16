@@ -1,1 +1,1 @@
-FROM docker.io/rhasspy/wyoming-whisper:2.4.0
+FROM docker.io/rhasspy/wyoming-whisper:2.5.0
