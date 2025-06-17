@@ -32,7 +32,6 @@ Each Image will be built with a `rolling` tag, along with tags specific to it's 
 
 Container | Channel | Image
 --- | --- | ---
-[act-runner](https://github.com/VirtualDisk/containers/pkgs/container/act-runner) | stable | ghcr.io/VirtualDisk/act-runner
 [actions-runner](https://github.com/VirtualDisk/containers/pkgs/container/actions-runner) | stable | ghcr.io/VirtualDisk/actions-runner
 [argocd](https://github.com/VirtualDisk/containers/pkgs/container/argocd) | stable | ghcr.io/VirtualDisk/argocd
 [docker](https://github.com/VirtualDisk/containers/pkgs/container/docker) | stable | ghcr.io/VirtualDisk/docker
@@ -40,10 +39,8 @@ Container | Channel | Image
 [ha-sip](https://github.com/VirtualDisk/containers/pkgs/container/ha-sip) | stable | ghcr.io/VirtualDisk/ha-sip
 [home-assistant](https://github.com/VirtualDisk/containers/pkgs/container/home-assistant) | stable | ghcr.io/VirtualDisk/home-assistant
 [olivetin](https://github.com/VirtualDisk/containers/pkgs/container/olivetin) | stable | ghcr.io/VirtualDisk/olivetin
-[openwebrxplus](https://github.com/VirtualDisk/containers/pkgs/container/openwebrxplus) | stable | ghcr.io/VirtualDisk/openwebrxplus
 [owncast](https://github.com/VirtualDisk/containers/pkgs/container/owncast) | stable | ghcr.io/VirtualDisk/owncast
 [rsync](https://github.com/VirtualDisk/containers/pkgs/container/rsync) | stable | ghcr.io/VirtualDisk/rsync
-[talos-image-factory](https://github.com/VirtualDisk/containers/pkgs/container/talos-image-factory) | stable | ghcr.io/VirtualDisk/talos-image-factory
 [talos-node-mgmt](https://github.com/VirtualDisk/containers/pkgs/container/talos-node-mgmt) | stable | ghcr.io/VirtualDisk/talos-node-mgmt
 [wget](https://github.com/VirtualDisk/containers/pkgs/container/wget) | stable | ghcr.io/VirtualDisk/wget
 [wyoming-openwakeword](https://github.com/VirtualDisk/containers/pkgs/container/wyoming-openwakeword) | stable | ghcr.io/VirtualDisk/wyoming-openwakeword
