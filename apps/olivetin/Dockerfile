@@ -8,11 +8,11 @@ RUN cd /tmp && tar xf /tmp/kubectl-cnpg_${CNPG_VERSION}_linux_x86_64.tar.gz && \
 
 FROM docker.io/jamesread/olivetin:2025.6.6
 # renovate: datasource=github-releases depName=argoproj/argo-cd
-ENV ARGOCD_VERSION=v2.14.14
+ENV ARGOCD_VERSION=v2.14.15
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
 ENV KUBERNETES_VERSION=v1.33.1
 # renovate: datasource=github-releases depName=GoogleCloudPlatform/kubectl-ai
-ENV KUBECTL_AI_VERSION=v0.0.12
+ENV KUBECTL_AI_VERSION=v0.0.14
 # renovate: datasource=github-releases depName=siderolabs/talos
 ENV TALOS_VERSION=v1.10.4
 # renovate: datasource=github-releases depName=sabhiram/go-wol
