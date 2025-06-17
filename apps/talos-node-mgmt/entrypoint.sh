@@ -31,4 +31,18 @@ shutdown_all() {
     talosctl shutdown --wait=false --timeout=8m
 }
 
+check_longhorn_volumes() {
+    for i in {1..20}; do
+        unhealthy="$(kubectl get volumes.longhorn.io -A -o json | jq '[.items[] | select(.status.robustness != "healthy")] | length')"
+        if [[ "$unhealthy" == "0" ]]; then
+            echo "All Longhorn volumes are healthy."
+            exit 0
+        fi
+        echo "Waiting for $unhealthy unhealthy Longhorn volume(s)..."
+        sleep 15
+    done
+    echo "Some Longhorn volumes are still not healthy after waiting." >&2
+    exit 1
+}
+
 "$@"

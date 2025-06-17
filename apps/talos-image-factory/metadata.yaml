@@ -1,9 +1,0 @@
----
-app: talos-image-factory
-semver: true
-channels:
-  - name: stable
-    platforms: ["linux/amd64"]
-    stable: true
-    tests:
-      enabled: false
