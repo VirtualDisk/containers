@@ -8,7 +8,7 @@ ENV CNPG_VERSION=1.26.0
 ENV TALOS_VERSION=v1.10.4
 
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
-ENV KUBERNETES_VERSION=v1.33.1
+ENV KUBERNETES_VERSION=v1.33.2
 
 ADD "https://github.com/cloudnative-pg/cloudnative-pg/releases/download/v${CNPG_VERSION}/kubectl-cnpg_${CNPG_VERSION}_linux_x86_64.tar.gz" /tmp
 ADD "https://dl.k8s.io/release/${KUBERNETES_VERSION}/bin/linux/amd64/kubectl" /tmp/kubectl
