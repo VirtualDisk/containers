@@ -10,7 +10,7 @@ FROM docker.io/jamesread/olivetin:2025.6.6
 # renovate: datasource=github-releases depName=argoproj/argo-cd
 ENV ARGOCD_VERSION=v2.14.15
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
-ENV KUBERNETES_VERSION=v1.33.1
+ENV KUBERNETES_VERSION=v1.33.2
 # renovate: datasource=github-releases depName=GoogleCloudPlatform/kubectl-ai
 ENV KUBECTL_AI_VERSION=v0.0.14
 # renovate: datasource=github-releases depName=siderolabs/talos
