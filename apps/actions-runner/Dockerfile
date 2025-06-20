@@ -2,7 +2,7 @@ ARG VERSION
 FROM --platform=amd64 ghcr.io/actions/actions-runner:latest
 
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
-ENV KUBERNETES_VERSION=v1.33.1
+ENV KUBERNETES_VERSION=v1.33.2
 # renovate: datasource=github-releases depName=siderolabs/talos
 ENV TALOS_VERSION=v1.10.4
 # renovate: datasource=github-releases depName=argoproj/argo-cd
