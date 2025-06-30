@@ -1,1 +1,1 @@
-FROM docker.io/rhasspy/wyoming-piper:1.5.4
+FROM docker.io/rhasspy/wyoming-piper:1.6.2
