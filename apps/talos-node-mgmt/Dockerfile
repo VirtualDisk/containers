@@ -12,7 +12,7 @@ RUN cd /tmp && tar xf /tmp/kubectl-cnpg_${CNPG_VERSION}_linux_x86_64.tar.gz && \
 FROM docker.io/library/alpine:3.22.0
 ARG VERSION
 # renovate: datasource=github-releases depName=siderolabs/talos
-ENV TALOS_VERSION=v1.10.4
+ENV TALOS_VERSION=v1.10.5
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
 ENV KUBERNETES_VERSION=v1.33.2
 # renovate: datasource=github-releases depName=GoogleCloudPlatform/kubectl-ai
