@@ -14,7 +14,7 @@ ARG VERSION
 # renovate: datasource=github-releases depName=siderolabs/talos
 ENV TALOS_VERSION=v1.10.5
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
-ENV KUBERNETES_VERSION=v1.33.2
+ENV KUBERNETES_VERSION=v1.33.3
 # renovate: datasource=github-releases depName=GoogleCloudPlatform/kubectl-ai
 ENV KUBECTL_AI_VERSION=v0.0.16
 
