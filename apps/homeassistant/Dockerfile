@@ -2,7 +2,7 @@ FROM docker.io/library/debian:trixie-slim AS downloader
 RUN apt-get update && apt-get install -y curl
 
 # renovate: datasource=github-releases depName=cloudnative-pg/cloudnative-pg
-ENV CNPG_VERSION=1.26.0
+ENV CNPG_VERSION=1.26.1
 
 # renovate: datasource=github-releases depName=siderolabs/talos
 ENV TALOS_VERSION=v1.10.5
