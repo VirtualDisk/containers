@@ -1,7 +1,7 @@
 FROM docker.io/library/debian:latest AS builder
 
 # renovate: datasource=github-releases depName=cloudnative-pg/cloudnative-pg
-ENV CNPG_VERSION=1.26.0
+ENV CNPG_VERSION=1.26.1
 
 RUN apt-get update && apt-get install -y curl
 ADD https://github.com/cloudnative-pg/cloudnative-pg/releases/download/v${CNPG_VERSION}/kubectl-cnpg_${CNPG_VERSION}_linux_x86_64.tar.gz /tmp
