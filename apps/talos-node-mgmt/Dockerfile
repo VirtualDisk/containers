@@ -41,4 +41,11 @@ RUN chmod +x /bin/talosctl && \
     chmod +x /bin/crane && \
     chmod +x /bin/kubectl-ai && \
     chmod +x /bin/entrypoint.sh
+
+RUN chown 1000:1000 /bin/talosctl && \
+    chown 1000:1000 /bin/kubectl && \
+    chown 1000:1000 /bin/crane && \
+    chown 1000:1000 /bin/kubectl-ai && \
+    chown 1000:1000 /bin/entrypoint.sh
+USER 1000
 CMD ["/bin/entrypoint.sh"]
