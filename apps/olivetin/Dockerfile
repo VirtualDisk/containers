@@ -6,7 +6,7 @@ ADD https://github.com/cloudnative-pg/cloudnative-pg/releases/download/v${CNPG_V
 RUN cd /tmp && tar xf /tmp/kubectl-cnpg_${CNPG_VERSION}_linux_x86_64.tar.gz && \
     chmod +x  /tmp/kubectl-cnpg
 
-FROM docker.io/jamesread/olivetin:2025.7.28
+FROM docker.io/jamesread/olivetin:2025.7.29
 # renovate: datasource=github-releases depName=argoproj/argo-cd
 ENV ARGOCD_VERSION=v3.0.12
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
