@@ -40,6 +40,7 @@ Container | Channel | Image
 [ha-sip](https://github.com/VirtualDisk/containers/pkgs/container/ha-sip) | stable | ghcr.io/VirtualDisk/ha-sip
 [home-assistant](https://github.com/VirtualDisk/containers/pkgs/container/home-assistant) | stable | ghcr.io/VirtualDisk/home-assistant
 [olivetin](https://github.com/VirtualDisk/containers/pkgs/container/olivetin) | stable | ghcr.io/VirtualDisk/olivetin
+[ollama-exporter](https://github.com/VirtualDisk/containers/pkgs/container/ollama-exporter) | stable | ghcr.io/VirtualDisk/ollama-exporter
 [owncast](https://github.com/VirtualDisk/containers/pkgs/container/owncast) | stable | ghcr.io/VirtualDisk/owncast
 [rsync](https://github.com/VirtualDisk/containers/pkgs/container/rsync) | stable | ghcr.io/VirtualDisk/rsync
 [talos-node-mgmt](https://github.com/VirtualDisk/containers/pkgs/container/talos-node-mgmt) | stable | ghcr.io/VirtualDisk/talos-node-mgmt
