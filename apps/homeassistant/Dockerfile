@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y curl
 ENV CNPG_VERSION=1.26.1
 
 # renovate: datasource=github-releases depName=siderolabs/talos
-ENV TALOS_VERSION=v1.10.5
+ENV TALOS_VERSION=v1.10.6
 
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
 ENV KUBERNETES_VERSION=v1.33.3
