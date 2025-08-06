@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y curl
 ENV CNPG_VERSION=1.26.1
 
 # renovate: datasource=github-releases depName=siderolabs/talos
-ENV TALOS_VERSION=v1.10.5
+ENV TALOS_VERSION=v1.10.6
 
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
 ENV KUBERNETES_VERSION=v1.33.3
@@ -18,7 +18,7 @@ RUN cd /tmp && tar xf "/tmp/kubectl-cnpg_${CNPG_VERSION}_linux_x86_64.tar.gz" &&
     chmod +x  /tmp/kubectl && \
     chmod +x  /tmp/talosctl
 
-FROM lscr.io/linuxserver/homeassistant:2025.7.4@sha256:5495467732d5c451ebde13fd462b39e3067dac26c36b033056769d32935477e4
+FROM lscr.io/linuxserver/homeassistant:2025.8.0@sha256:e9869ac0efe131123af068e97eee8f41e776fb1b9e82d8eb0858021b61f78292
 
 COPY --from=downloader /tmp/kubectl-cnpg /extbin/kubectl-cnpg
 COPY --from=downloader /tmp/kubectl /extbin/kubectl
